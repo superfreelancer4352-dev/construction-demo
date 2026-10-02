@@ -1,69 +1,86 @@
-import Image from "next/image";
+import {
+  ArrowRight,
+  BadgeCheck,
+  BrickWall,
+  Building2,
+  Clock3,
+  HardHat,
+  Layers3,
+  MapPin,
+  Paintbrush,
+  Sparkles,
+  ShieldCheck,
+  UsersRound,
+} from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main id="top">
+      <section className="home-hero">
+        <div className="home-hero-shade" />
+        <div className="home-hero-content">
+          <p className="eyebrow"><span /> Commercial / Residential / General contracting</p>
+          <h1>Built for<br /><em>what&apos;s next.</em></h1>
+          <p className="hero-lede">Construction solutions for commercial and residential projects across Nebraska and Iowa.</p>
+          <div className="hero-actions">
+            <a className="button button-pink" href="/contact">Request a bid <ArrowRight size={15} aria-hidden="true" /></a>
+            <a className="button button-outline" href="/work">View our work <ArrowRight size={15} aria-hidden="true" /></a>
+          </div>
+          <div className="hero-proof">
+            <div><ShieldCheck size={22} /><span>Quality<br />workmanship</span></div>
+            <div><UsersRound size={22} /><span>Trusted<br />partner</span></div>
+            <div><MapPin size={22} /><span>Nebraska &amp;<br />Iowa</span></div>
+            <div><BadgeCheck size={22} /><span>On time<br />&amp; on budget</span></div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <nav className="home-services-strip" aria-label="Construction services">
+        <a href="/services"><Building2 /><span>General<br />contracting</span></a>
+        <a href="/services"><Layers3 /><span>Drywall<br />installation</span></a>
+        <a href="/services"><BrickWall /><span>Metal<br />framing</span></a>
+        <a href="/services"><Paintbrush /><span>Painting</span></a>
+        <a href="/services"><HardHat /><span>Selective<br />demolition</span></a>
+        <a href="/services"><Sparkles /><span>Interior<br />finishes</span></a>
+      </nav>
+
+      <section className="home-story" id="about">
+        <div className="home-story-image" role="img" aria-label="Finished commercial interior with architectural timber and glass" />
+        <div className="home-story-copy">
+          <p className="eyebrow"><span /> Why choose Freddy&apos;s Drywall</p>
+          <h2>Quality work.<br /><em>Stronger spaces.</em></h2>
+          <p>Freddy&apos;s Drywall LLC provides commercial and residential construction services with a focus on quality, safety, and long-term partnerships. We specialize in drywall, metal framing, painting, selective demolition, and interior finishes, helping bring architects, general contractors, and property owners&apos; visions to life across Nebraska and Iowa.</p>
+          <div className="story-proof">
+            <div><BadgeCheck /><span>Experienced<br />crews</span></div>
+            <div><ShieldCheck /><span>Safety<br />focused</span></div>
+            <div><UsersRound /><span>Reliable<br />partner</span></div>
+            <div><Building2 /><span>Built for<br />what&apos;s next</span></div>
+          </div>
+          <a className="button button-pink" href="/about">Learn more about us <ArrowRight size={15} aria-hidden="true" /></a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="home-projects" id="work">
+        <div className="home-section-heading"><div><span className="pink-rule" /><p>Featured project types</p></div><a href="/work">View all project types <ArrowRight size={15} /></a></div>
+        <div className="home-projects-grid">
+          <a className="home-project-card" href="/work"><div className="home-project-photo home-project-retail" role="img" aria-label="Retail interior with polished finish details" /><h3>Retail build-out</h3><p>Drywall · Framing · Painting</p><ArrowRight className="project-arrow" size={16} /></a>
+          <a className="home-project-card" href="/work"><div className="home-project-photo home-project-commercial" role="img" aria-label="Modern commercial interior with glass partitions" /><h3>Commercial interior</h3><p>Framing · Drywall · Finishes</p><ArrowRight className="project-arrow" size={16} /></a>
+          <a className="home-project-card" href="/work"><div className="home-project-photo home-project-office" role="img" aria-label="Contemporary office space" /><h3>Office space</h3><p>Drywall · Painting · Finishes</p><ArrowRight className="project-arrow" size={16} /></a>
+          <a className="home-project-card" href="/work"><div className="home-project-photo home-project-multi" role="img" aria-label="Multi-level residential interior" /><h3>Multi-family interior</h3><p>Framing · Drywall · Painting</p><ArrowRight className="project-arrow" size={16} /></a>
+        </div>
+      </section>
+
+      <section className="home-cta-pair">
+        <article className="home-cta-project"><div><p className="eyebrow"><span /> Have a project?</p><h2>Let&apos;s build it<br /><em>together.</em></h2><p>We bring experience, people, and a commitment to quality on every project.</p><a className="button button-pink" href="/contact">Request a bid <ArrowRight size={15} /></a></div></article>
+        <article className="home-cta-trades"><div><p className="eyebrow"><span /> Are you a subcontractor?</p><h2>Good work<br /><em>takes a good crew.</em></h2><p>Interested in working together? Tell us about your trade and services.</p><a className="button button-outline" href="/subcontractors">Become a subcontractor <ArrowRight size={15} /></a></div></article>
+      </section>
+
+      <section className="home-commitments" aria-label="Our commitments">
+        <div><ShieldCheck /><span>Quality<br />workmanship</span></div>
+        <div><UsersRound /><span>Trusted trade<br />partnerships</span></div>
+        <div><MapPin /><span>Nebraska &amp; Iowa<br />service area</span></div>
+        <div><Clock3 /><span>Committed to<br />the details</span></div>
+      </section>
+    </main>
   );
 }
